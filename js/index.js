@@ -1,6 +1,7 @@
 
 
 window.addEventListener('DOMContentLoaded', function loaded(){
+    // UI Control Module
     let UIController = (function UIController() {
         let domString = {
             btns : "#btn",
@@ -55,14 +56,15 @@ window.addEventListener('DOMContentLoaded', function loaded(){
         }
     })();
 
+    // Data Control Module
     let DataController = (function DataController() {
         function checkValue(inputBill, inputValue){
             return (inputBill && inputValue) ? true : false;
         }
 
         function calc(bill, amt, val){
-            let tipValue = parseInt((((parseInt(bill) / 100) * amt) / val).toFixed(2));
-            let totalBill = ((tipValue + amt) / val).toFixed(2);
+            let tipValue = +((((parseInt(bill) / 100) * amt) / val).toFixed(2));
+            let totalBill = +((tipValue + amt) / val).toFixed(2);
 
            return {
                tipValue,
@@ -76,6 +78,7 @@ window.addEventListener('DOMContentLoaded', function loaded(){
         }
     })();
 
+    // Controller Module
     let Controller = (function Controller(UI, Data) {
         let DomString = UI.Dom;
 
@@ -109,6 +112,8 @@ window.addEventListener('DOMContentLoaded', function loaded(){
                 e.preventDefault();
 
                 UI.defaultValue();
+
+                UI.Removewarning();
             });
         };
 

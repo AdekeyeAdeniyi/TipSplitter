@@ -1,6 +1,6 @@
 /* Media Queries Manager */
 
-@media screen  and (max-width : 76.8rem){
+@media screen  and (max-width : 76.6rem){
     .split {
         flex-direction: column;
         width: 80%;
@@ -8,5 +8,13 @@
 
     .split-calc{
         width: 100%;
+    }
+
+    .reset {
+        margin-top: 0;
+    }
+
+    .container {
+        gap: .8rem
     }
 }
