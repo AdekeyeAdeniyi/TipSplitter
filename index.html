@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Tip Splitter</title>
+
+    <!-- Styling Link -->
+    <link rel='stylesheet' href='css/index.css' type='text/css'>
+
+    <!-- Media Queries -->
+    <link rel="stylesheet" href="css/mediaQueries.css" type="text/css">
+</head>
+<body>
+    <section class='container d-flex d-center'>
+        <h1 class='heading'> Spli<span class='d-block'>tter</span></h1>
+
+        <div class='split d-flex d-space'>
+            <div class='split-calc'>
+                <div class='split-items'>
+                    <label for='bill' class='label d-block'> Bill </label>
+                    <div class='input-icon'>
+                        <input type='text' name='bill' id='bill' class='input-form w-100 input-light' placeholder="0.00"/>
+                        <span class='icon'> $ </span>
+                    </div>
+                </div>
+                <div class='split-items'>
+                    <label for='btn' class='label d-block'> Select tip % </label>
+                    <p class='split-btn d-flex d-space'>
+                        <input type='button' id="btn" class='btn input-dark' name='btn' value='10%' />
+                        <input type='button' id="btn" class='btn input-dark' name='btn' value='20%' />
+                        <input type='button' id="btn" class='btn input-dark' name='btn' value='30%' />
+                    </p>
+                    <p class='split-btn d-flex d-space'>
+                        <input type='button' id="btn" class='btn input-dark' name='btn' value='40%' />
+                        <input type='button' id="btn" class='btn input-dark' name='btn' value='50%' />
+                        <input type='text' id="btn-value" class='btn btn--small input-light' name='btn' />
+                    </p>
+                </div>
+                <div class='split-items'>
+                    <p class='split-text d-flex d-space'>
+                        <label class='label d-inline-block' for='value'> Number of people </label>
+                        <label id='warning' class='label d-inline-block'> Can't be zero </label>
+                    </p>
+                    <input type='text' name='value' id='value' class='input-form w-100 input-light'/>
+                </div>
+            </div>
+            <div class='split-value'>
+                <div class=' split-tip d-flex d-space'>
+                    <p class='split-tip__text'> Tip Amount <span class='lead d-block'> / person </span></p>
+                    <p class='split-tip__amount' id='tip-amount'></p>
+                </div>
+                <div class='split-tip d-flex d-space'>
+                    <p class='split-tip__text'> Total Amount <span class='lead d-block'> / person </span></p>
+                    <p class='split-tip__amount' id='total-amount'> </p> 
+                </div>
+
+                <input type='reset' name='resetValue' id='restValue' value='Reset' class='reset w-100 d-flex' />
+            </div>
+        </div>
+    </section>
+
+    <!-- Script Link -->
+    <script src='js/index.js'></script>
+</body>
+</html>
